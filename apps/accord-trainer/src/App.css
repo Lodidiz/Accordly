@@ -1,0 +1,296 @@
+:root {
+  font-family:
+    Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f7f7f7;
+  background: #090909;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 28rem),
+    #090909;
+}
+
+button {
+  font: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.screen {
+  width: min(100%, 420px);
+  min-height: 680px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 32px;
+  background: rgba(18, 18, 18, 0.88);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.42);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 12vw, 5rem);
+  line-height: 0.92;
+  letter-spacing: -0.08em;
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.baseline {
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
+}
+
+.hero {
+  margin-top: 72px;
+}
+
+.actions,
+.bottom-actions {
+  margin-top: auto;
+  display: grid;
+  gap: 14px;
+}
+
+.bottom-actions {
+  grid-template-columns: 1fr 1fr;
+}
+
+.primary-button,
+.secondary-button,
+.choice-button {
+  min-height: 56px;
+  border: 0;
+  border-radius: 18px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.primary-button {
+  color: #050505;
+  background: #f7f7f7;
+}
+
+.secondary-button {
+  color: #f7f7f7;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.screen-header {
+  margin-bottom: 36px;
+}
+
+.screen-header h1 {
+  font-size: clamp(2.5rem, 9vw, 4.2rem);
+}
+
+.config-block {
+  margin-bottom: 34px;
+}
+
+.choice-row {
+  display: flex;
+  gap: 14px;
+}
+
+.choice-button {
+  flex: 1;
+  color: #f7f7f7;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.choice-button.selected {
+  color: #050505;
+  background: #f7f7f7;
+}
+
+.checkbox-row {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 700;
+}
+
+.checkbox-row input {
+  width: 22px;
+  height: 22px;
+  accent-color: #f7f7f7;
+}
+
+.warning {
+  margin: -8px 0 24px;
+  color: #ff8f8f;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.countdown-screen {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.countdown-number {
+  font-size: clamp(7rem, 32vw, 12rem);
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  line-height: 0.9;
+}
+
+.game-screen {
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.game-screen.success-state {
+  border-color: rgba(72, 255, 156, 0.8);
+  background: rgba(15, 54, 34, 0.9);
+}
+
+.game-screen.failure-state {
+  border-color: rgba(255, 84, 84, 0.85);
+  background: rgba(60, 18, 18, 0.9);
+}
+
+.game-topbar {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.chord-zone {
+  margin: auto 0;
+  text-align: center;
+}
+
+.chord-display {
+  font-size: clamp(5rem, 24vw, 9rem);
+  font-weight: 950;
+  letter-spacing: -0.09em;
+  line-height: 1;
+}
+
+.listening-label {
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-weight: 800;
+}
+
+.feedback-card {
+  min-height: 64px;
+  margin-bottom: 18px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.74);
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 700;
+}
+
+.debug-panel {
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.debug-panel p {
+  margin: 0 0 12px;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.debug-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.debug-actions .secondary-button {
+  min-height: 44px;
+  border-radius: 14px;
+  font-size: 0.85rem;
+}
+
+.debug-notes {
+  margin: 12px 0 0 !important;
+}
+
+.metrics {
+  display: grid;
+  gap: 16px;
+  margin-top: 42px;
+}
+
+.metric-card,
+.history-row {
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 800;
+}
+
+.history-list {
+  display: grid;
+  gap: 14px;
+}
+
+.history-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.9rem;
+}
+
+.empty-history {
+  color: rgba(255, 255, 255, 0.64);
+  font-weight: 700;
+}
