@@ -1,6 +1,6 @@
 # État actuel
 
-Photographie vérifiée dans le dépôt le **28 août 2026**.
+Photographie vérifiée dans le dépôt le **31 août 2026**.
 
 ## Implémenté
 
@@ -12,6 +12,8 @@ Photographie vérifiée dans le dépôt le **28 août 2026**.
 - Une capture microphone par `getUserMedia` et `MediaRecorder`, par segments de 2 s.
 - Une analyse locale par Basic Pitch avec modèle servi depuis `public/`.
 - Une validation par égalité exacte des trois classes de hauteur détectées et attendues.
+- Des tests unitaires Vitest pour le catalogue, le filtrage, le tirage aléatoire et la
+  validation des accords.
 
 ## Expérimental ou non vérifié
 
@@ -28,13 +30,13 @@ Photographie vérifiée dans le dépôt le **28 août 2026**.
 - `vite-plugin-pwa` est installé et verrouillé, mais absent de `vite.config.ts` ; aucun
   manifeste ni service worker applicatif n'est présent ou enregistré.
 
-## Validations du 28 août 2026
+## Validations du 31 août 2026
 
 - `npm run build` : **réussi**, avec un avertissement sur un chunk JavaScript minifié
   d'environ 1,24 Mo.
-- `npm run lint` : **échoué**, avec 1 erreur `react-hooks/set-state-in-effect` et
-  1 avertissement `react-hooks/exhaustive-deps` dans `src/App.tsx`.
-- Tests automatisés : **absents** (aucun script `test`, aucun fichier de test trouvé).
+- `npm run lint` : **réussi**, sans erreur ni avertissement.
+- `npm test` : **réussi**, avec 28 tests unitaires dans 3 fichiers.
+- `npm run validate` : disponible pour exécuter successivement lint, tests et build.
 
 ## Orientations non implémentées
 

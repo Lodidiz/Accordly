@@ -18,6 +18,7 @@ Source : `apps/accord-trainer/package.json`, lockfile et configuration actuels.
 ## Outillage
 
 - ESLint 10 avec règles TypeScript et React Hooks.
+- Vitest 4 pour les tests unitaires TypeScript de la logique du trainer.
 - `@vitejs/plugin-basic-ssl` pour le serveur de développement HTTPS.
 - npm et `package-lock.json` pour verrouiller les dépendances.
 
@@ -30,5 +31,5 @@ Source : `apps/accord-trainer/package.json`, lockfile et configuration actuels.
 
 ## Absent
 
-Aucun backend, base de données, framework de test ou service cloud n'est configuré.
-Tout ajout ou remplacement structurant exige une décision validée et un ADR pertinent.
+Aucun backend, base de données ou service cloud n'est configuré. Tout ajout ou
+remplacement structurant exige une décision validée et un ADR pertinent.

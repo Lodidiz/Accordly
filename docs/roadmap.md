@@ -17,10 +17,12 @@ fixe ni échéance ni seuil chiffré non mesuré.
 
 ## 2. Établir la base de qualité
 
-- Corriger l'erreur et l'avertissement ESLint actuels.
-- Définir une stratégie de tests automatisés avant d'étendre fortement le trainer.
-- Tester le catalogue, le tirage et la validation des accords.
-- Ajouter à terme une commande générale de validation.
+- Maintenir le lint sans erreur ni avertissement (base assainie le 28 août 2026).
+- Maintenir une base de tests unitaires Vitest avant d'étendre fortement le trainer.
+- Étendre au besoin la couverture initiale du catalogue, du tirage et de la validation
+  des accords, ajoutée le 28 août 2026.
+- Maintenir `npm run validate` comme commande générale pour le lint, les tests et le
+  build.
 - Décider du maintien ou du retrait de `tonal`, installé mais inutilisé.
 - Continuer à surveiller la taille du bundle et le chargement du moteur audio avant
   toute optimisation.
