@@ -38,7 +38,9 @@ d'accords et leur temps moyen. Effacer les données du navigateur supprime l'his
 - Les contrôles « Debug correct » et « Debug faux » sont visibles dans l'interface.
 - La progression dépend d'une reconnaissance audio encore non qualifiée.
 - Il n'y a ni pause, ni abandon explicite, ni gestion dédiée d'une erreur microphone.
-- Le catalogue, les règles et les résultats n'ont aucun test automatisé.
+- Le catalogue, le filtrage, le tirage et la validation des accords sont couverts par
+  des tests unitaires ; le déroulement complet d'une session et ses résultats ne le
+  sont pas encore.
 
 ## Évolutions décidées, non implémentées
 

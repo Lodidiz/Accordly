@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useEffectEvent, useMemo, useRef, useState } from "react";
 import "./App.css";
 
 import {
@@ -113,6 +113,12 @@ function App() {
     return totalTimeMs / chordTimes.length;
   }, [totalTimeMs, chordTimes.length]);
 
+  const evaluateDetectedNotesFromAudio = useEffectEvent(
+    (chord: Chord, detectedNotes: string[]) => {
+      evaluateDetectedNotesForChord(chord, detectedNotes);
+    }
+  );
+
   useEffect(() => {
     statusRef.current = status;
   }, [status]);
@@ -136,9 +142,13 @@ function App() {
   useEffect(() => {
     if (status !== "countdown") return;
 
-    if (countdown <= 0) {
-      const firstChord = drawRandomChord(config);
+    const timeout = window.setTimeout(() => {
+      if (countdown > 1) {
+        setCountdown((current) => current - 1);
+        return;
+      }
 
+      const firstChord = drawRandomChord(config);
       setCurrentChord(firstChord);
       setPreviousChordId(firstChord.id);
 
@@ -150,12 +160,6 @@ function App() {
       setLastDetectedNotes([]);
       setNow(Date.now());
       setStatus("playing");
-
-      return;
-    }
-
-    const timeout = window.setTimeout(() => {
-      setCountdown((current) => current - 1);
     }, 1000);
 
     return () => window.clearTimeout(timeout);
@@ -224,7 +228,7 @@ function App() {
         console.log("Notes détectées :", uniqueNotes);
 
         if (!cancelled && statusRef.current === "playing") {
-          evaluateDetectedNotesForChord(activeChord, uniqueNotes);
+          evaluateDetectedNotesFromAudio(activeChord, uniqueNotes);
         }
       } catch (error) {
         console.error("Erreur audio :", error);
@@ -243,7 +247,7 @@ function App() {
       cancelled = true;
       isRecordingRef.current = false;
     };
-  }, [status, currentChord?.id]);
+  }, [status, currentChord]);
 
   function resetNoiseCalibration() {
     noiseFloorRef.current = AUDIO_CONFIG.defaultNoiseFloor;

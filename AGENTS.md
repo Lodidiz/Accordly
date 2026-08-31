@@ -113,13 +113,13 @@ Commandes disponibles :
 
 - `npm run build` : TypeScript puis build Vite ;
 - `npm run lint` : ESLint ;
+- `npm test` : tests unitaires Vitest ;
+- `npm run validate` : lint, tests unitaires puis build ;
 - `npm run dev` : serveur de développement HTTPS ;
 - `npm run preview` : prévisualisation du build.
 
-Il n'existe actuellement aucun script ni fichier de test automatisé. Ne jamais
-annoncer des tests automatisés exécutés. Pour chaque tâche, exécuter les validations
-pertinentes disponibles et rapporter leur résultat réel, y compris les échecs et
-avertissements.
+Pour chaque tâche, exécuter les validations pertinentes disponibles et rapporter leur
+résultat réel, y compris les échecs et avertissements.
 
 Les changements audio, microphone, responsive, iPad ou iPhone nécessitent en plus une
 vérification manuelle ciblée quand l'environnement est disponible. Si elle ne l'est
