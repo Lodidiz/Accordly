@@ -42,6 +42,10 @@ Définir des critères mesurables pour :
 Les seuils chiffrés seront définis après une première campagne de mesures, pas inventés
 dans la documentation.
 
+Le [protocole de première campagne](features/audio-acceptance-criteria.md) précise les
+mesures, les conditions, les données à conserver et les règles de conclusion. Les
+seuils restent volontairement ouverts jusqu'à l'analyse de cette campagne.
+
 ## 4. Instrumenter le pipeline audio
 
 - Mesurer la durée de capture.

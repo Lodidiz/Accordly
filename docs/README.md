@@ -27,6 +27,7 @@ Les statuts employés sont :
 | [`glossary.md`](glossary.md) | Pour le vocabulaire métier |
 | [`features/trainer.md`](features/trainer.md) | Pour le trainer et ses règles |
 | [`features/audio-recognition.md`](features/audio-recognition.md) | Pour le microphone ou la reconnaissance |
+| [`features/audio-acceptance-criteria.md`](features/audio-acceptance-criteria.md) | Pour mesurer et qualifier la reconnaissance audio |
 | [`features/pwa.md`](features/pwa.md) | Pour l'installabilité et le hors-ligne |
 | [`decisions/ADR-001-PWA.md`](decisions/ADR-001-PWA.md) | Pour l'évaluation de la stratégie de distribution mobile |
 | [`decisions/ADR-002-Basic-Pitch.md`](decisions/ADR-002-Basic-Pitch.md) | Pour le choix actuel du moteur audio |
