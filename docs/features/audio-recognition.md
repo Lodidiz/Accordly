@@ -44,6 +44,11 @@ erreurs microphone, la consommation, la chauffe, la batterie et le comportement 
 Safari comme depuis l'écran d'accueil. Aucun seuil chiffré n'est arrêté avant une
 première campagne de mesures.
 
+Le [protocole de mesure et les règles de conclusion](audio-acceptance-criteria.md)
+définissent la première campagne. Les paramètres de collecte y sont fixés pour rendre
+le test exécutable, mais les seuils de qualité restent à décider après les premières
+mesures.
+
 L'instrumentation devra mesurer séparément la capture, le calcul RMS, l'inférence Basic
 Pitch, le post-traitement et la latence totale. Elle devra conserver les notes attendues
 et détectées, compter tentatives, réussites et erreurs, et permettre d'exploiter ou
